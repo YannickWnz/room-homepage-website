@@ -63,6 +63,25 @@ nav {
 
 .nav-list li {
     list-style-type: none;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.nav-list li::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: var(--white);
+    bottom: 0;
+    border-radius: 10px;
+    left: 25%;
+    transform: scale(0);
+    transition: .2s all ease-out;
+}
+
+.nav-list li:hover::after {
+    transform: scale(1);
 }
 
 .nav-list li:not(:nth-child(1)) {
@@ -84,11 +103,28 @@ nav {
     position: relative;
 }
 
+.container-one-images {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.container-one-images div:nth-child(1) {
+    background-image: url('/images/desktop-image-hero-1.jpg');
+}
+
+.container-one-images div:nth-child(2) {
+    background-image: url('/images/desktop-image-hero-2.jpg');
+}
+
+.container-one-images div:nth-child(3) {
+    background-image: url('/images/desktop-image-hero-3.jpg');
+}
+
 .container-one-img-wrapper-one {
     width: 100%;
     height: 100%;
-    background-image: url('/images/desktop-image-hero-1.jpg');
-    display: none;
+    /* display: none; */
 }
 
 .active-hero-img {
